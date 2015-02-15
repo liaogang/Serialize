@@ -19,7 +19,6 @@
 
 using namespace std;
 
-
     
 /// int
 FILE& operator<<(FILE& f,const int t);
@@ -42,25 +41,36 @@ FILE& operator<<(FILE& f,const time_t &t);
 FILE& operator>>(FILE& f,time_t& t);
 
 
-///  vector<T>
+
+
+///  vector
 template <class T>
-FILE& operator<<(FILE& f,const vector<T> &t);
-
-template <class T>
-FILE& operator>>(FILE& f,vector<T> &t);
-
-
-
-#if defined(__cplusplus)
-extern "C" {
-#endif
-   
-    
-    
-#if defined(__cplusplus)
+FILE& operator<<(FILE& f,const vector<T> &t)
+{
+    int length = (int)t.size();
+    f<<length;
+    for (int i = 0; i< length; i++)
+    {
+        f<<t[i];
+    }
+    return f;
 }
-#endif /* defined(__cplusplus) */
 
 
+template <class T>
+FILE& operator>>(FILE& f,vector<T> &t)
+{
+    int length ;
+    f>>length;
+    
+    for (int i = 0; i< length; i++)
+    {
+        T tt;
+        f>>tt;
+        t.push_back(tt);
+    }
+    
+    return f;
+}
 
 #endif

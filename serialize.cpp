@@ -74,34 +74,6 @@ FILE& operator>>(FILE& f,time_t& t)
     return f;
 }
 
-///  vector<T>
-template <class T>
-FILE& operator<<(FILE& f,const vector<T> &t)
-{
-    int length = (int)t.size();
-    f<<length;
-    for (int i = 0; i< length; i++)
-    {
-        f<<t[i];
-    }
-    return f;
-}
 
-
-template <class T>
-FILE& operator>>(FILE& f,vector<T> &t)
-{
-    int length ;
-    f>>length;
-    
-    for (int i = 0; i< length; i++)
-    {
-        T tt;
-        f>>tt;
-        t.push_back(tt);
-    }
-    
-    return f;
-}
 
 
