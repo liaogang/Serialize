@@ -17,15 +17,22 @@ Pod::Spec.new do |s|
 
   s.name         = "serialize"
   s.version      = "0.0.1"
-  s.summary      = "A short description of serialize."
+  s.summary      = "serialize tool for c/c++ basic object types, ie. int ,char ,string,time_t..."
 
   s.description  = <<-DESC
-                   A longer description of serialize in Markdown format.
+				   Some functions that overload operation '>>' and '<<' ,make it simple	to write or read from 'FILE'.		
 
-                   * Think: Why did you write this? What is the focus? What does it do?
-                   * CocoaPods will be using this to generate tags, and improve search results.
-                   * Try to keep it short, snappy and to the point.
-                   * Finally, don't worry about the indent, CocoaPods strips it!
+				   FILE *file = fopen("/test.txt", "w");
+				   int i = 1;
+				   char c = 'd';
+				   string str = "test_string";
+
+				   // write those to the file
+				   file << i << c << str;
+					
+				   // read value from file
+				   file >> i >> c >> str;
+
                    DESC
 
   s.homepage     = "https://github.com/liaogang/serialize.git"
@@ -39,7 +46,7 @@ Pod::Spec.new do |s|
   #  Popular ones are 'MIT', 'BSD' and 'Apache License, Version 2.0'.
   #
 
-  s.license      = "MIT (example)"
+  s.license      = "MIT"
   # s.license      = { :type => "MIT", :file => "FILE_LICENSE" }
 
 
@@ -78,8 +85,8 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  #s.source       = { :git => "https://github.com/liaogang/serialize.git", :tag => "0.0.1" }
-  s.source       = { :git => "https://github.com/liaogang/serialize.git"}
+  s.source       = { :git => "https://github.com/liaogang/serialize.git", :tag => "v0.0.1" }
+  #s.source       = { :git => "https://github.com/liaogang/serialize.git"}
 
 
   # ――― Source Code ―――――――――――――――――――――――――――――――――――――――――――――――――――――――――――――― #
