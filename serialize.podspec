@@ -16,7 +16,7 @@ Pod::Spec.new do |s|
   #
 
   s.name         = "serialize"
-  s.version      = "0.0.1"
+  s.version      = "0.0.2"
   s.summary      = "serialize tool for c/c++ basic object types, ie. int ,char ,string,time_t..."
 
   s.description  = <<-DESC
@@ -85,7 +85,7 @@ Pod::Spec.new do |s|
   #  Supports git, hg, bzr, svn and HTTP.
   #
 
-  s.source       = { :git => "https://github.com/liaogang/serialize.git", :tag => "v0.0.1" }
+  s.source       = { :git => "https://github.com/liaogang/serialize.git", :tag => "v0.0.2" }
   #s.source       = { :git => "https://github.com/liaogang/serialize.git"}
 
 
