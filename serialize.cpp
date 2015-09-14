@@ -23,6 +23,19 @@ FILE& operator>>(FILE& f,int& t)
     return f;
 }
 
+/// float
+FILE& operator<<(FILE& f,const float t)
+{
+    fwrite(&t,sizeof(float),1,&f);
+    return f;
+}
+
+FILE& operator>>(FILE& f,float& t)
+{
+    fread(&t,sizeof(float),1,&f);
+    return f;
+}
+
 /// char
 //write zero terminated str array
 FILE& operator<<(FILE& f,const TCHAR * str)

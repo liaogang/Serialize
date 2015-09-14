@@ -24,6 +24,9 @@ using namespace std;
 FILE& operator<<(FILE& f,const int t);
 FILE& operator>>(FILE& f,int& t);
 
+/// float
+FILE& operator<<(FILE& f,const float t);
+FILE& operator>>(FILE& f,float& t);
 
 /// char
 //write zero terminated str array
